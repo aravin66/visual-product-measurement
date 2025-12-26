@@ -101,3 +101,35 @@ flowchart TD
     I --> A
 
 
+    ## Technology Stack
+- **Backend**: FastAPI (Python)
+- **AI Model**: Google Gemini Vision (`google-genai`)
+- **Frontend**: HTML, CSS, Vanilla JavaScript
+- **Validation**: Pydantic schemas
+- **Environment**: Python 3.11
+
+---
+
+## Setup Instructions
+
+Follow the steps below to set up and run the project locally.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/aravin66/visual-product-measurement.git
+cd visual-product-measurement
+
+# 2. Create a virtual environment
+python -m venv venv
+
+# 3. Activate the virtual environment (Windows)
+venv\Scripts\activate
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the application
+uvicorn app.main:app --reload
+
+
+
