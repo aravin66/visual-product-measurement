@@ -84,4 +84,20 @@ All images belonging to the same `product_id` are analyzed together to generate 
 ---
 
 ## High-Level Architecture
+flowchart TD
+    A[User / Frontend UI] --> B[FastAPI Backend]
+    
+    B --> C[Request Validation]
+    C -->|Validate Image URLs| D[Image Validator]
+
+    D --> E[Vision AI Service]
+    E -->|Analyze Images| F[Gemini Vision Model]
+
+    F --> G[AI Response Parsing]
+    G --> H[Pydantic Schema Validation]
+
+    H --> I[Structured JSON Output]
+
+    I --> A
+
 
