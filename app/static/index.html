@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI-Powered Visual Product Measurement</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="page">
+    <div class="card">
+        <h1>AI-Powered Visual Product Measurement</h1>
+        <p class="subtitle">
+            Upload one or more product image URLs to extract objective visual measurements
+        </p>
+
+        <!-- MULTI URL INPUT -->
+        <textarea
+            id="imageUrls"
+            placeholder="Paste one or more image URLs (one per line)"
+        ></textarea>
+
+        <button onclick="analyze()">Analyze Product</button>
+
+        <div id="loading" class="loading hidden">
+            🔍 Analyzing images using AI...
+        </div>
+
+        <pre id="output" class="output"></pre>
+    </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
